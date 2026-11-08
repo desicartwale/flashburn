@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlashBurn™ — Liquid Metabolism Drops: Hype or Legit?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Cautionary, Neutral Colors */
+            --primary: #334155; /* Slate Gray */
+            --primary-hover: #1E293B;
+            --accent: #0F766E; /* Teal for safe highlights */
+            --bg-main: #F8FAFC; /* Off-white */
+            --bg-white: #FFFFFF;
+            --bg-alt: #F1F5F9; 
+            --text-dark: #0F172A;
+            --text-light: #475569;
+            --text-muted: #64748B;
+            --border-color: #CBD5E1;
+            
+            /* Warning Colors */
+            --alert-bg: #FFF7ED; /* Orange/Amber tint */
+            --alert-border: #FED7AA;
+            --alert-text: #9A3412;
+            --danger-bg: #FEF2F2; /* Red tint */
+            --danger-border: #FECACA;
+            --danger-text: #991B1B;
+
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        img { max-width: 100%; height: auto; display: block; }
+        
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+        /* Typography */
+        h1, h2, h3, h4 { color: var(--text-dark); font-weight: 700; line-height: 1.2; margin-bottom: 1rem; }
+        h1 { font-size: 2.5rem; letter-spacing: -0.02em; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        p { color: var(--text-light); margin-bottom: 1rem; }
+        .section-label {
+            color: var(--accent); font-weight: 700; font-size: 0.875rem; text-transform: uppercase;
+            letter-spacing: 0.05em; margin-bottom: 0.5rem; display: block;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center;
+            padding: 0.75rem 1.5rem; font-weight: 600; border-radius: var(--radius-md);
+            transition: all 0.2s ease; cursor: pointer; text-align: center; border: 2px solid transparent;
+        }
+        .btn-primary { background-color: var(--primary); color: var(--bg-white); box-shadow: var(--shadow-md); }
+        .btn-primary:hover { background-color: var(--primary-hover); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+        .btn-outline { background-color: transparent; color: var(--primary); border-color: var(--primary); }
+        .btn-outline:hover { background-color: var(--bg-alt); }
+        .btn-full { width: 100%; }
+
+        /* Layout Grids */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+        
+        @media (max-width: 992px) {
+            .grid-4 { grid-template-columns: repeat(2, 1fr); }
+            .grid-3 { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.75rem; }
+        }
+
+        /* Header */
+        header { background-color: var(--bg-white); box-shadow: var(--shadow-sm); position: sticky; top: 0; z-index: 50; padding: 1rem 0; border-bottom: 1px solid var(--border-color); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.75rem; font-weight: 800; color: var(--primary); letter-spacing: -0.02em; }
+        .nav-links { display: flex; gap: 1rem; align-items: center; }
+        .nav-links a { font-size: 0.85rem; font-weight: 600; color: var(--text-dark); transition: color 0.2s; }
+        .nav-links a:hover { color: var(--accent); }
+        .nav-disclaimer { font-size: 0.75rem; color: var(--text-muted); font-style: italic; }
+        .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-dark); }
+        
+        @media (max-width: 1024px) {
+            .nav-links {
+                display: none; position: absolute; top: 100%; left: 0; right: 0;
+                background: var(--bg-white); flex-direction: column; padding: 1rem; box-shadow: var(--shadow-md);
+            }
+            .nav-links.active { display: flex; }
+            .mobile-menu-btn { display: block; }
+            .nav-disclaimer { display: none; }
+        }
+
+        /* Sections */
+        section { padding: 5rem 0; }
+        .section-alt { background-color: var(--bg-white); }
+        
+        /* Hero */
+        .hero { background: linear-gradient(135deg, var(--bg-alt) 0%, var(--bg-main) 100%); padding: 6rem 0 4rem; }
+        .badge-text { display: inline-block; background: var(--bg-white); color: var(--primary); font-size: 0.75rem; font-weight: 700; padding: 0.5rem 1rem; border-radius: 2rem; margin-bottom: 1.5rem; border: 1px solid var(--border-color); letter-spacing: 0.05em; }
+        .hero-disclaimer { font-size: 0.75rem; color: var(--text-muted); margin-top: 1.5rem; font-style: italic; }
+        .hero-image-placeholder { background-color: var(--border-color); border-radius: var(--radius-lg); height: 100%; min-height: 400px; display: flex; align-items: center; justify-content: center; color: var(--text-muted); overflow: hidden; }
+        .format-callout { background-color: var(--bg-white); color: var(--text-dark); font-weight: 600; padding: 0.75rem; border-radius: var(--radius-md); font-size: 0.85rem; margin-bottom: 1rem; display: inline-block; border: 1px solid var(--border-color);}
+
+        /* Warning & Alert Boxes */
+        .alert-box { background-color: var(--alert-bg); border: 1px solid var(--alert-border); border-left: 4px solid var(--alert-text); padding: 1.5rem; border-radius: 0 var(--radius-md) var(--radius-md) 0; margin: 2rem 0;}
+        .alert-box h4 { color: var(--alert-text); margin-bottom: 0.5rem; font-size: 1.1rem; text-transform: uppercase;}
+        .alert-box p { color: var(--alert-text); margin: 0; font-size: 0.95rem;}
+        
+        .danger-box { background-color: var(--danger-bg); border: 1px solid var(--danger-border); border-left: 4px solid var(--danger-text); padding: 1.5rem; border-radius: 0 var(--radius-md) var(--radius-md) 0; margin: 2rem 0;}
+        .danger-box h4 { color: var(--danger-text); margin-bottom: 0.5rem; font-size: 1.1rem; text-transform: uppercase;}
+        .danger-box p { color: var(--danger-text); margin: 0; font-size: 0.95rem;}
+        
+        .callout-box { background-color: var(--bg-alt); border-left: 4px solid var(--primary); padding: 1.5rem; margin: 2rem 0; border-radius: 0 var(--radius-md) var(--radius-md) 0; }
+        .callout-box p { color: var(--text-dark); font-weight: 500; margin: 0; }
+        .mechanism-card { border-left: 4px solid var(--accent); padding-left: 1.5rem; margin-bottom: 2rem; }
+
+        /* Cards */
+        .card { background: var(--bg-white); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 2rem; transition: transform 0.2s, box-shadow 0.2s; }
+        .card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+        .disclaimer-label { display: inline-block; background: var(--bg-alt); color: var(--text-light); font-size: 0.7rem; font-weight: 600; padding: 0.25rem 0.5rem; border-radius: 4px; margin-top: 1rem; text-transform: uppercase; }
+
+        /* Review Cards */
+        .review-card { background: var(--bg-white); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 2rem; display: flex; flex-direction: column;}
+        .review-header { display: flex; align-items: center; margin-bottom: 1rem; }
+        .reviewer-info { margin-left: 1rem; }
+        .reviewer-name { font-weight: 700; color: var(--text-dark); }
+        .reviewer-meta { font-size: 0.8rem; color: var(--text-muted); }
+        .review-text { font-style: italic; color: var(--text-light); flex-grow: 1; margin-bottom: 1.5rem;}
+        
+        /* Pricing */
+        .pricing-card { display: flex; flex-direction: column; height: 100%; text-align: center; }
+        .pricing-highlight { border: 2px solid var(--primary); transform: scale(1.05); }
+        @media (max-width: 768px) { .pricing-highlight { transform: scale(1); } }
+        .pricing-badge { background: var(--primary); color: white; padding: 0.25rem 1rem; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; border-radius: 0 0 var(--radius-md) var(--radius-md); display: inline-block; margin: -2rem auto 1rem; }
+        .price-display { font-size: 1.25rem; font-weight: 700; color: var(--text-dark); margin: 1.5rem 0; }
+        .pricing-features { text-align: left; margin-bottom: 2rem; flex-grow: 1; }
+        .pricing-features li { margin-bottom: 0.5rem; font-size: 0.9rem; display: flex; align-items: start; }
+        .pricing-features li::before { content: "✓"; color: var(--primary); margin-right: 0.5rem; font-weight: bold; }
+        .guarantee-note { font-size: 0.8rem; font-weight: 600; color: var(--text-dark); margin-bottom: 1rem; display: block; }
+        
+        /* Table */
+        .table-responsive { overflow-x: auto; margin-top: 2rem; }
+        table { width: 100%; border-collapse: collapse; background: var(--bg-white); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); }
+        th, td { padding: 1rem; text-align: left; border-bottom: 1px solid var(--border-color); }
+        th { background: var(--bg-alt); font-weight: 600; color: var(--text-dark); }
+        td { color: var(--text-light); font-size: 0.9rem; }
+        .table-disclaimer { font-size: 0.8rem; color: var(--text-muted); margin-top: 1rem; font-style: italic; }
+
+        /* FAQ */
+        .accordion-item { border: 1px solid var(--border-color); border-radius: var(--radius-md); margin-bottom: 1rem; background: var(--bg-white); }
+        .accordion-header { width: 100%; text-align: left; padding: 1.25rem; font-size: 1rem; font-weight: 600; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: var(--text-dark); }
+        .accordion-content { padding: 0 1.25rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+        .accordion-content p { padding-bottom: 1.25rem; margin: 0; }
+        
+        /* Footer */
+        footer { background-color: #0F172A; color: #F1F5F9; padding: 4rem 0 2rem; }
+        footer a { color: #94A3B8; transition: color 0.2s; }
+        footer a:hover { color: #FFFFFF; }
+        footer h4 { color: #FFFFFF; margin-bottom: 1.5rem; font-size: 1.1rem; }
+        footer p { color: #64748B; font-size: 0.9rem; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-disclaimer { border-top: 1px solid #1E293B; padding-top: 2rem; text-align: center; font-size: 0.8rem; color: #64748B; }
+        .secure-checkout { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1rem; background: #020617; padding: 0.75rem 1rem; border-radius: var(--radius-md); font-size: 0.85rem; color: #38BDF8; font-weight: 600; border: 1px solid #1E293B;}
+        
+        @media (max-width: 992px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 2rem; } }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">FlashBurn</a>
+            <nav class="nav-links">
+                <a href="#how-it-works">How It Works</a>
+                <a href="#ingredients">Ingredients</a>
+                <a href="#comparison">Comparison</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#faq">FAQ</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#guarantee">Guarantee</a>
+                <a href="#sources">Sources</a>
+                <span class="nav-disclaimer">(illustrative)</span>
+                <a href="order.html" class="btn btn-primary">Order Now </a>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Toggle navigation">☰</button>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="grid-2" style="margin-bottom: 2rem;">
+                <div>
+                    <span class="badge-text">WEIGHT MANAGEMENT • METABOLISM SUPPORT • LIQUID DROPS</span>
+                    <h1>FlashBurn™ — Liquid Metabolism Drops: Hype or Legit?</h1>
+                    <h3>FlashBurn is a liquid dietary supplement marketed as a herbal weight loss supplement designed to support metabolism, appetite control, and fat burning.</h3>
+                    
+                    <div class="format-callout">
+                        60 mL dropper bottle | Pictured label: 60 servings (1 mL each) | Seller page: "30-day supply" | Plant-based | Non-GMO | Gluten-free
+                    </div>
+
+                    <p>FlashBurn — also sold as Flash Burn Drops — is a liquid dietary supplement marketed as a herbal weight loss supplement designed to support metabolism, appetite control, and fat burning. It is sold in a dropper bottle, with the pictured label showing a 60 mL container providing 60 one-milliliter servings, though the seller's own offer page describes a bottle as a 30-day supply — a discrepancy that makes the true cost-per-day difficult to calculate before purchase.</p>
+                    <p>The product is promoted as plant-based, non-GMO, and gluten-free, and is manufactured in the United States in FDA-registered, GMP-certified facilities according to the brand's materials. However, the most consequential feature of FlashBurn is its lack of ingredient transparency: the label discloses a proprietary blend of 22 ingredients totaling 200 mg per 1 mL serving, alongside only 0.7 mcg of chromium picolinate — but not one individual ingredient dose is disclosed.</p>
+                    
+                    <div style="margin: 1.5rem 0; display: flex; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem; font-weight: 600; color: var(--text-dark);">
+                        <span>✓ Liquid Format</span>
+                        <span>✓ Multi-Ingredient Blend</span>
+                        <span>✓ Plant-Based Positioning</span>
+                        <span>✓ Mild Energy Enhancement</span>
+                        <span>✓ Adaptogen Support</span>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;">
+                        <a href="#pricing" class="btn btn-primary">Explore FlashBurn</a>
+                        <a href="#how-it-works" class="btn btn-outline">See How It Works</a>
+                    </div>
+                    <p class="hero-disclaimer">*FlashBurn is a dietary supplement marketed for weight-management wellness. It is not a medicine or a treatment for any medical condition. Individual experiences vary.</p>
+                </div>
+                <div>
+                    <!-- Image Placeholder for Hero -->
+                    <div class="hero-image-placeholder">
+                        <img src="images/flashburn1bottle.webp" alt="FlashBurn 60mL Dropper Bottle" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Critical Callout below hero -->
+            <div class="alert-box" style="margin-bottom: 0;">
+                <h4>IMPORTANT</h4>
+                <p>The label discloses a proprietary blend of 22 ingredients totaling 200 mg per serving, but <strong>not one individual ingredient dose is disclosed.</strong> Independent reviewers note that this pictured panel is structurally identical to the panels of Gelatine Sculpt and LeanBurn Drops, raising questions about whether the formula is genuinely distinct or simply repackaged under a different name.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. "What Is FlashBurn?" Section -->
+    <section class="section-alt" id="about">
+        <div class="container grid-2">
+            <div>
+                <span class="section-label">GET TO KNOW THE PRODUCT</span>
+                <h2>What Is FlashBurn? Exploring the Liquid Botanical Supplement</h2>
+                <p style="margin-bottom: 2rem;">FlashBurn — also sold as Flash Burn Drops — is a liquid dietary supplement marketed as a herbal weight loss supplement designed to support metabolism, appetite control, and fat burning. It is sold in a dropper bottle, with the pictured label showing a 60 mL container providing 60 one-milliliter servings, though the seller's own offer page describes a bottle as a 30-day supply — a discrepancy that makes the true cost-per-day difficult to calculate before purchase.</p>
+                
+                <h3 style="font-size: 1.25rem;">Product Positioning and Manufacturing</h3>
+                <p>The product is promoted as plant-based, non-GMO, and gluten-free, and is manufactured in the United States in FDA-registered, GMP-certified facilities according to the brand's materials.</p>
+                
+                <div class="danger-box">
+                    <h4>The Core Transparency Problem</h4>
+                    <p>The most consequential feature of FlashBurn is its lack of ingredient transparency. The label discloses a proprietary blend of 22 ingredients totaling 200 mg per 1 mL serving, alongside only 0.7 mcg of chromium picolinate. The blend names maca root, grape seed, guarana seed, African mango, eleutherococcus root, astragalus root, green tea leaf, gymnema leaf, coleus root, capsicum, grapefruit, Panax ginseng, raspberry ketones, L-glutamine, L-tyrosine, L-arginine, beta-alanine, glycyrrhizinate, GABA, L-ornithine, L-tryptophan, and L-carnitine — <strong>but not one individual ingredient dose is disclosed.</strong> Independent reviewers note that this pictured panel is structurally identical to the panels of Gelatine Sculpt and LeanBurn Drops, raising questions about whether the formula is genuinely distinct or simply repackaged under a different name.</p>
+                </div>
+            </div>
+            <div>
+                <div class="alert-box" style="margin-top: 0;">
+                    <h4>The "Official Website" Problem</h4>
+                    <p>A second red flag is the absence of a single verified official source. Multiple websites claim to be the "official" FlashBurn page, and third-party trust scanners have assigned some of these domains trust scores as low as 1/100 and 32/100. The marketing follows a familiar direct-response pattern: countdown timers, "limited stock" banners, and advertorial-style pages that mimic health news articles. While the ingredient names themselves are real compounds found in many weight-support products, the finished FlashBurn formula has no published clinical trials and no independent verification of its specific claims.</p>
+                </div>
+
+                <div style="background-color: var(--bg-main); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+                    <h3 style="font-size: 1.25rem;">Who Is FlashBurn Marketed Toward?</h3>
+                    <p>FlashBurn is marketed toward adults who are interested in liquid botanical weight-management supplements and general wellness — particularly those who prefer a liquid dropper format over capsules. Anyone considering the product should check the current packaging, review the complete ingredient declaration and make sure the available product information is suitable for their individual needs.</p>
+                    
+                    <h3 style="font-size: 1.25rem; margin-top: 1.5rem;">What Should You Know Before Purchasing?</h3>
+                    <p>Review the complete ingredient declaration, serving size, usage directions, warnings and seller information. Critically, verify that you are on a legitimate seller page, confirm billing terms at checkout, and understand that the refund guarantee has generated significant complaints about execution. These details help provide a clearer picture of the product and its purchase terms.</p>
+                    
+                    <div class="callout-box" style="margin-bottom: 0;">
+                        <p>FlashBurn is presented as a liquid botanical weight-management supplement. Review the actual product label, understand its directions and consider your individual health circumstances before making a decision.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. "How Does FlashBurn Work?" Section -->
+    <section id="how-it-works">
+        <div class="container" style="max-width: 900px;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <span class="section-label">THE SCIENCE BEHIND THE FORMULA</span>
+                <h2>How Does FlashBurn Work? Proposed Mechanisms and Limitations</h2>
+                <p>FlashBurn's marketing describes a multi-pathway mechanism rather than a single fat-burning switch.</p>
+            </div>
+
+            <div class="mechanism-card">
+                <h3>Mechanism 1: Thermogenesis</h3>
+                <p>The first pathway is thermogenesis — the process by which the body generates heat and expends calories — driven by ingredients such as green tea extract and capsicum (chili pepper). The brand argues that these botanicals "gently raise internal core temperature," allowing the body to burn more energy even at rest. This is a plausible mechanism at the ingredient level, as green tea catechins and capsaicinoids have been studied for modest thermogenic effects, <strong>but the undisclosed blend dose makes it impossible to know whether FlashBurn contains enough of either to produce a measurable effect.</strong></p>
+            </div>
+
+            <div class="mechanism-card">
+                <h3>Mechanism 2: Blood Sugar Stabilization and Craving Control</h3>
+                <p>The second proposed pathway is blood sugar stabilization and craving control. Chromium picolinate is included for its role in insulin sensitivity, with the argument that steadier glucose levels reduce the mid-afternoon crashes that drive sugar cravings and snacking. <strong>However, the label discloses only 0.7 mcg of chromium per serving</strong> — a fraction of the 20–200 mcg typically used in chromium supplementation studies — which independent reviewers flag as a dose unlikely to produce meaningful metabolic effects.</p>
+            </div>
+
+            <div class="mechanism-card">
+                <h3>Mechanism 3: Mitochondrial and Cellular Energy Support</h3>
+                <p>The third pathway is mitochondrial and cellular energy support, with adaptogens such as maca root and ginseng positioned as supporting ATP production and "clean, sustained energy" rather than a stimulant-driven spike.</p>
+            </div>
+
+            <div class="alert-box">
+                <h4>Critical Context</h4>
+                <p>The marketing leans heavily on scientific-sounding language without verifiable product-specific evidence. Scamadviser's analysis notes that FlashBurn's pages reference "clinically studied ingredients" rather than a clinically studied product, and name-drop publications like Nature in proximity to ingredient discussions without actual citations. The liquid format is promoted as offering faster sublingual absorption that bypasses first-pass liver metabolism, but no independent pharmacokinetic data supports this claim for the FlashBurn formula specifically.</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <p style="font-weight: 500; color: var(--text-dark);">The realistic interpretation is that FlashBurn is a convenience-format botanical blend whose mechanism is plausible at the ingredient level but unverified at the product level — and whose undisclosed dosing makes any mechanism claim speculative.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. "Key Ingredients" Section -->
+    <section class="section-alt" id="ingredients">
+        <div class="container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
+                <span class="section-label">FORMULA TRANSPARENCY MATTERS</span>
+                <h2>FlashBurn Key Ingredients and Formula Information</h2>
+                <p>The ingredient list in FlashBurn reads like a greatest-hits compilation of the weight-support category, which is precisely what makes the proprietary blend structure so frustrating.</p>
+            </div>
+
+            <div class="grid-2" style="gap: 3rem;">
+                <div>
+                    <h3 style="color: var(--primary); font-size: 1.25rem;">Green Tea Extract and Guarana Seed</h3>
+                    <p>Supply the thermogenic and caffeine backbone, with green tea catechins (EGCG) studied for fat oxidation and guarana providing a natural caffeine source that may support energy enhancement and alertness.</p>
+
+                    <h3 style="color: var(--primary); font-size: 1.25rem; margin-top: 1.5rem;">Capsicum (Cayenne)</h3>
+                    <p>Contributes capsaicinoids, which are associated with mild thermogenesis and appetite reduction.</p>
+
+                    <h3 style="color: var(--primary); font-size: 1.25rem; margin-top: 1.5rem;">African Mango Seed Extract</h3>
+                    <p>Has been tested in a randomized trial (IGOB131) over 10 weeks, but that study used a defined preparation and daily dose — neither of which can be matched to FlashBurn's hidden milligram amount.</p>
+
+                    <h3 style="color: var(--primary); font-size: 1.25rem; margin-top: 1.5rem;">Grape Seed Extract and Gymnema Leaf</h3>
+                    <p>Round out the antioxidant and glucose-awareness profile.</p>
+                </div>
+                
+                <div>
+                    <h3 style="color: var(--primary); font-size: 1.25rem;">Adaptogenic and Amino-Acid Support Cluster (Maca Root, Panax Ginseng, Eleutherococcus, Astragalus)</h3>
+                    <p>Included as stress-axis adaptogens, with the argument that they support mitochondrial energy production and help buffer the cortisol-driven cravings that undermine natural weight loss efforts.</p>
+
+                    <h3 style="color: var(--primary); font-size: 1.25rem; margin-top: 1.5rem;">L-Carnitine, L-Tyrosine, GABA, and L-Tryptophan</h3>
+                    <p>L-carnitine is present for fatty-acid transport into mitochondria, L-tyrosine and GABA for neurotransmitter and mood support, and L-tryptophan as a serotonin precursor — an amino-acid stack that mirrors nootropic and mood-support formulas more than evidence-based fat-loss protocols.</p>
+                    
+                    <div class="danger-box" style="margin-top: 1.5rem; margin-bottom: 1.5rem;">
+                        <h4>The Critical Dosing Limitation</h4>
+                        <p>Every one of these 22 ingredients shares a single 200 mg total, meaning the average per-ingredient dose — if evenly distributed — would be roughly 9 mg. For context, green tea extract is typically studied at 250–500 mg, African mango at 150 mg twice daily, and L-carnitine at 500–2,000 mg. Independent reviewers explicitly state that the shared blend "does not establish a stronger formula" and that a new name and bottle color should not be read as evidence of a distinct or improved product.</p>
+                    </div>
+
+                    <div class="callout-box" style="margin-top: 0;">
+                        <p><strong>The Practical Takeaway:</strong> FlashBurn may provide gentle, multi-ingredient metabolic support, but the undisclosed dosing means consumers cannot verify whether any individual ingredient is present at a level associated with the benefits advertised.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Safety Info Block -->
+            <div style="background: var(--bg-main); border: 1px solid var(--border-color); padding: 2rem; border-radius: var(--radius-lg); margin-top: 3rem;">
+                <h3 style="color: var(--primary); font-size: 1.25rem; margin-bottom: 1rem;">Safety Information and Responsible Use</h3>
+                <p>The formula is marketed as plant-based and manufactured in an FDA-registered, GMP-certified facility, and the individual ingredient names are standard for the category. However, safety cannot be fully assessed without disclosed doses — and FlashBurn's blend hides every individual amount. Reported side effects from user reviews include nausea, abdominal pain, jitteriness, and sleep disruption, which are consistent with caffeine-containing botanicals (guarana, green tea) taken in unknown quantities. The product is not recommended for anyone pregnant, nursing, under 18, or managing a medical condition without medical guidance.</p>
+                <p style="font-size: 0.8rem; color: var(--text-muted); font-style: italic; margin-top: 1rem; border-top: 1px solid var(--border-color); padding-top: 1rem;">Dietary supplements are not substitutes for medical diagnosis or treatment. FlashBurn is not intended to diagnose, treat, cure or prevent any disease or medical condition.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. "Benefits" Section -->
+    <section id="benefits">
+        <div class="container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
+                <span class="section-label">WHAT THE FORMULA IS DESIGNED TO SUPPORT</span>
+                <h2>Benefits of FlashBurn</h2>
+                <p>Based on the product's ingredient profile and marketing positioning, the following benefits are associated with FlashBurn. These are not guaranteed outcomes and individual experiences vary.</p>
+            </div>
+
+            <div class="grid-2">
+                <ul class="pricing-features" style="margin-bottom: 0;">
+                    <li><strong>Liquid dropper format</strong> offers a convenient alternative for people who dislike swallowing capsules.</li>
+                    <li><strong>Plant-based positioning</strong> — marketed as non-GMO and gluten-free, with botanical ingredients.</li>
+                    <li><strong>Multi-ingredient approach</strong> includes thermogenic, adaptogenic, and amino-acid components in a single product.</li>
+                    <li><strong>Green tea and guarana</strong> provide natural caffeine for a mild energy enhancement effect.</li>
+                    <li><strong>Chromium is included</strong> for blood sugar and insulin sensitivity support, albeit at a very low disclosed dose.</li>
+                </ul>
+                <ul class="pricing-features" style="margin-bottom: 0;">
+                    <li><strong>Adaptogens (maca, ginseng, astragalus)</strong> target stress-related eating patterns alongside metabolism.</li>
+                    <li><strong>Sublingual delivery</strong> is marketed as supporting faster absorption than capsule formats.</li>
+                    <li><strong>Manufactured in an FDA-registered, GMP-certified US facility</strong> according to the brand.</li>
+                    <li><strong>60-day money-back guarantee</strong> is advertised, providing a nominal risk-reversal window.</li>
+                    <li><strong>Multi-bottle pricing tiers</strong> (2, 3, or 6 bottles) reduce the per-bottle cost for longer trials.</li>
+                </ul>
+            </div>
+            
+            <p style="text-align: center; font-size: 0.8rem; color: var(--text-muted); margin-top: 2rem; font-style: italic;">These benefit statements describe the product's marketing positioning and ingredient profile. They are not guarantees of specific results. Individual experiences vary based on diet, activity, sleep, stress and overall health.</p>
+        </div>
+    </section>
+
+    <!-- 6. "Product Research Guide" Section -->
+    <section class="section-alt">
+        <div class="container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
+                <span class="section-label">YOUR PRODUCT RESEARCH GUIDE</span>
+                <h2>Four Simple Steps for Evaluating FlashBurn</h2>
+                <p>Choosing a weight-management supplement requires more than looking at its advertised positioning. If you are considering FlashBurn as part of your wellness routine, these practical steps can help you review the product information carefully.</p>
+            </div>
+
+            <div class="grid-4">
+                <div class="card" style="padding: 1.5rem;">
+                    <h3 style="color: var(--primary); font-size: 1.1rem;">Step 1: Examine the Ingredients</h3>
+                    <p style="font-size: 0.9rem;">Review the latest FlashBurn Supplement Facts panel. Check ingredient names, quantities, serving size and other information provided on the package. Note that the formula uses a proprietary blend of 22 ingredients totaling 200 mg per serving, with only 0.7 mcg of chromium picolinate disclosed — not one individual botanical dose is listed.</p>
+                </div>
+                <div class="card" style="padding: 1.5rem;">
+                    <h3 style="color: var(--primary); font-size: 1.1rem;">Step 2: Read the Usage Details</h3>
+                    <p style="font-size: 0.9rem;">Dosing instructions vary by seller. Because the bottle volume and serving count are inconsistent across listings — 60 mL with 60 servings versus a "30-day supply" — users should follow the specific instructions printed on the bottle they receive and not assume that taking more drops accelerates results.</p>
+                </div>
+                <div class="card" style="padding: 1.5rem; background-color: var(--alert-bg); border-color: var(--alert-border);">
+                    <h3 style="color: var(--alert-text); font-size: 1.1rem;">Step 3: Compare Purchase Options</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-dark);">Compare package quantities, total prices, shipping charges and the final checkout amount. <strong>Critically, screenshot the entire checkout flow and decline any post-purchase upsell. Confirm in writing whether the purchase is a one-time payment before entering card details.</strong> FlashBurn's checkout has been reported to include upsells and subscription-style offers.</p>
+                </div>
+                <div class="card" style="padding: 1.5rem;">
+                    <h3 style="color: var(--primary); font-size: 1.1rem;">Step 4: Consider Your Health</h3>
+                    <p style="font-size: 0.9rem;">Consult a professional before use. Stacking FlashBurn with other products is not advisable without professional guidance, primarily because the undisclosed caffeine content makes it impossible to calculate total stimulant intake. Adding FlashBurn to other caffeinated products could push total caffeine exposure beyond a safe threshold.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. "Comparison" Section -->
+    <section id="comparison">
+        <div class="container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">
+                <span class="section-label">MAKE A WELL-INFORMED CHOICE</span>
+                <h2>How to Evaluate FlashBurn Against Other Weight-Management Supplements</h2>
+                <p>Products in the weight-management category may differ in their ingredients, serving formats, label transparency and purchase conditions. Use the points below as a general guide when comparing FlashBurn with other available supplement options.</p>
+            </div>
+            
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Evaluation Factor</th>
+                            <th>FlashBurn</th>
+                            <th>Other Weight-Management Supplement</th>
+                            <th>Single-Ingredient Product</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Main Product Category</strong></td>
+                            <td>Liquid botanical weight-management wellness</td>
+                            <td>Depends on the individual product</td>
+                            <td>Depends on the selected ingredient</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Format</strong></td>
+                            <td>60 mL liquid dropper bottle (60 servings per pictured label; "30-day supply" per seller page)</td>
+                            <td>Capsules, tablets, powders, liquids</td>
+                            <td>Varies by product</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Price Per Serving</strong></td>
+                            <td>Calculate from current price and serving size — but confirm bottle volume and serving count</td>
+                            <td>Varies by brand and package</td>
+                            <td>Varies by product</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ingredient Disclosure</strong></td>
+                            <td>Proprietary blend of 22 ingredients totaling 200 mg; only chromium 0.7 mcg disclosed</td>
+                            <td>Depends on manufacturer</td>
+                            <td>Check product packaging</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ingredient Quantities</strong></td>
+                            <td><strong>Not disclosed</strong> for any botanical or amino-acid ingredient</td>
+                            <td>Disclosure varies</td>
+                            <td>Check the stated amount</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Chromium Dose</strong></td>
+                            <td><strong>0.7 mcg</strong> — a fraction of the 20–200 mcg used in studies</td>
+                            <td>Varies by product</td>
+                            <td>Check the stated amount</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Stimulant Content</strong></td>
+                            <td>Contains natural caffeine from guarana and green tea — exact amount not disclosed</td>
+                            <td>Varies — some are high-stimulant</td>
+                            <td>Depends on ingredient</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Official Website</strong></td>
+                            <td><strong>No single verified official source</strong>; multiple domains claim to be official with trust scores as low as 1/100</td>
+                            <td>Varies by retailer</td>
+                            <td>Varies by retailer</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Refund Policy</strong></td>
+                            <td>60-day money-back guarantee advertised, but complaints about restocking fees, return shipping costs, and 50% refund offers</td>
+                            <td>Varies by retailer</td>
+                            <td>Varies by retailer</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Quality Information</strong></td>
+                            <td>Manufactured in FDA-registered, GMP-certified US facility per brand</td>
+                            <td>Depends on manufacturer</td>
+                            <td>Depends on supplier</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Supporting Information</strong></td>
+                            <td>Ingredient-level research only; no clinical trial of finished formula</td>
+                            <td>Depends on product evidence</td>
+                            <td>Depends on ingredient research</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="table-disclaimer">This table is a general research guide, not an independent laboratory test, clinical comparison or verified product ranking. Confirm current formula details, prices and policies with the seller.</p>
+        </div>
+    </section>
+
+    <!-- 8. "Pricing" Section -->
+    <section class="section-alt" id="pricing">
+        <div class="container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">
+                <span class="section-label">CHOOSE YOUR PACKAGE SIZE</span>
+                <h2>FlashBurn Pricing, Package Quantities and Available Offers</h2>
+                <p>Review the available FlashBurn package options and confirm the current price, shipping details and final order total on the seller's checkout page. Pricing tiers are listed at 2 bottles for $79 each ($158 total), 3 bottles for $69 each ($207 total), and 6 bottles for $49 each ($294 total), with free US shipping on the 3- and 6-bottle packs.</p>
+            </div>
+
+            <div class="danger-box" style="margin: 0 auto 3rem; max-width: 900px; border-radius: var(--radius-md);">
+                <h4>IMPORTANT: CRITICAL BILLING WARNING</h4>
+                <p>FlashBurn's checkout has been reported to include upsells and subscription-style offers. A Trustpilot reviewer describes being offered "6 more bottles at a huge discount" seconds after processing the initial payment, while watching what appeared to be a required video. Other complaints reference restocking fees, return shipping costs, and being told they could only receive a 50% refund until the product was returned. The seller's stated refund terms may also include a restocking fee or a cancellation fee depending on the offer page. <strong>Screenshot the entire checkout flow, decline any post-purchase upsell, and confirm in writing whether the purchase is a one-time payment before entering card details.</strong></p>
+            </div>
+
+            <div class="grid-3" style="align-items: center;">
+                <!-- Starter Package -->
+                <div class="card pricing-card">
+                    <div style="background: var(--bg-alt); height: 150px; display: flex; align-items: center; justify-content: center; margin: -2rem -2rem 1.5rem; border-radius: var(--radius-lg) var(--radius-lg) 0 0; overflow: hidden;">
+                        <img src="images/flashburn1bottle.webp" alt="Starter Package - 2 Bottles" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="quantity-badge" style="font-weight: 700; color: var(--text-light); margin-bottom: 0.5rem;">2 BOTTLES</div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">STARTER PACKAGE</h3>
+                    <div class="price-display">$79 per bottle | $158 total</div>
+                    
+                    <ul class="pricing-features">
+                        <li>60 mL dropper bottle per unit</li>
+                        <li>Confirm serving count on label</li>
+                        <li>Review Current Return Policy</li>
+                        <li>Confirm Package Details</li>
+                        <li style="color: var(--danger-text); font-weight: 600;">Confirm billing terms at checkout</li>
+                        <li>Free US shipping on 3- and 6-bottle packs</li>
+                    </ul>
+                    
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">Confirm Shipping at Checkout</p>
+                    <span class="guarantee-note">60-Day Money-Back Guarantee (advertised — see complaints)</span>
+                    <button class="btn btn-outline btn-full"><a href="order.html">Order Now </a></button>
+                </div>
+
+                <!-- Popular Package -->
+                <div class="card pricing-card pricing-highlight">
+                    <span class="pricing-badge">Popular Choice</span>
+                    <div style="background: var(--bg-alt); height: 150px; display: flex; align-items: center; justify-content: center; margin: 0 -2rem 1.5rem; overflow: hidden;">
+                         <img src="images/flashburn3bottle.webp" alt="Popular Package - 3 Bottles" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="quantity-badge" style="font-weight: 700; color: var(--primary); margin-bottom: 0.5rem;">3 BOTTLES</div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">POPULAR PACKAGE</h3>
+                    <div class="price-display" style="color: var(--primary);">$69 per bottle | $207 total</div>
+                    
+                    <ul class="pricing-features">
+                        <li>60 mL dropper bottle per unit</li>
+                        <li>Confirm serving count on label</li>
+                        <li>Review Current Return Policy</li>
+                        <li>Confirm Package Details</li>
+                        <li style="color: var(--danger-text); font-weight: 600;">Confirm billing terms at checkout</li>
+                        <li>Free US shipping</li>
+                    </ul>
+                    
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">Free US Shipping</p>
+                    <span class="guarantee-note">60-Day Money-Back Guarantee (advertised — see complaints)</span>
+                    <button class="btn btn-primary btn-full"><a href="order.html">Order Now</a></button>
+                </div>
+
+                <!-- Value Package -->
+                <div class="card pricing-card">
+                    <div style="background: var(--bg-alt); height: 150px; display: flex; align-items: center; justify-content: center; margin: -2rem -2rem 1.5rem; border-radius: var(--radius-lg) var(--radius-lg) 0 0; overflow: hidden;">
+                         <img src="images/flashburn6bottle.webp" alt="Value Package - 6 Bottles" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="quantity-badge" style="font-weight: 700; color: var(--text-light); margin-bottom: 0.5rem;">6 BOTTLES</div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">VALUE PACKAGE</h3>
+                    <div class="price-display">$49 per bottle | $294 total</div>
+                    
+                    <ul class="pricing-features">
+                        <li>60 mL dropper bottle per unit</li>
+                        <li>Confirm serving count on label</li>
+                        <li>Review Current Return Policy</li>
+                        <li>Confirm Package Details</li>
+                        <li style="color: var(--danger-text); font-weight: 600;">Confirm billing terms at checkout</li>
+                        <li>Free US shipping</li>
+                    </ul>
+                    
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">Free US Shipping</p>
+                    <span class="guarantee-note">60-Day Money-Back Guarantee (advertised — see complaints)</span>
+                    <button class="btn btn-outline btn-full"><a href="order.html">Order Now </a></button>
+                </div>
+            </div>
+            
+            <p style="text-align: center; font-size: 0.8rem; color: var(--text-muted); margin-top: 3rem; font-style: italic;">Package prices and quantities must be confirmed on the official checkout page. Offers may change. Confirm current availability, shipping charges, package details and final charges before ordering.</p>
+        </div>
+    </section>
+
+    <!-- 9. "Money-Back Guarantee" Section -->
+    <section id="guarantee">
+        <div class="container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">
+                <span class="section-label" style="justify-content: center;">ORDER WITH CONFIDENCE — READ THE TERMS</span>
+                <h3 style="margin-bottom: 1.5rem;">Does FlashBurn Have a Money-Back Guarantee?</h3>
+                <p style="color: var(--text-dark);">FlashBurn advertises a 60-day money-back guarantee from the date of purchase, with the stated condition that customers must have used the product for at least 30 days before requesting a refund if they are not satisfied. On paper, this provides a two-month window to trial the supplement.</p>
+            </div>
+
+            <div class="danger-box" style="margin: 0 auto 2rem; max-width: 800px;">
+                <h4>CRITICAL EXECUTION COMPLAINTS</h4>
+                <p>In practice, the guarantee has generated significant complaints about execution. Trustpilot reviewers report being told they must pay for return shipping, being charged a $100 restocking fee, and being offered only a 50% refund until the product was returned — none of which aligns with the "keep the product" language used in some promotional videos. One reviewer describes waiting months for a return code, while another notes that the refund process appeared designed to outlast the 60-day window. A separate review states that the refund guarantee is "advertised but may be slow or convoluted in execution."</p>
+            </div>
+                
+            <div style="background-color: var(--bg-main); padding: 1.5rem; border-radius: var(--radius-md); max-width: 800px; margin: 0 auto; border: 1px solid var(--border-color);">
+                <h4 style="font-size: 1rem; margin-bottom: 0.5rem; color: var(--text-dark);">Important Details:</h4>
+                <ul style="font-size: 0.9rem; color: var(--text-light); list-style: disc; margin-left: 1.5rem; margin-top: 0.5rem;">
+                    <li style="margin-bottom: 0.5rem;">The practical implication is that the guarantee exists as a stated policy but is not reliably honored without persistence and documentation.</li>
+                    <li style="margin-bottom: 0.5rem;">Buyers should keep the order confirmation, the exact offer page they purchased from, and all email correspondence.</li>
+                    <li style="margin-bottom: 0.5rem;">If a refund is needed, initiating the request in writing before the 60-day deadline — and explicitly referencing the seller's own stated terms — is essential.</li>
+                    <li>Given the pattern of complaints, the guarantee should be treated as a conditional safeguard rather than a frictionless return policy.</li>
+                </ul>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto; text-align: center; padding-top: 3rem; border-top: 1px solid var(--border-color); margin-top: 3rem;">
+                <span class="section-label">READ THE TERMS</span>
+                <h3 style="margin-bottom: 1rem;">Understand FlashBurn Purchase and Return Policy</h3>
+                <p>Before placing an order, take a moment to review the terms provided by the FlashBurn seller. Check your selected package, the total purchase amount, shipping fees, estimated delivery information and the conditions that apply after purchase.</p>
+                <p>Carefully read the seller's written return and refund policy. Pay attention to the applicable time period, product eligibility, return instructions, refund method and any additional costs. Keep your order confirmation and refer to the seller's published contact details if you need help.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. "Customer Reviews" Section -->
+    <section class="section-alt" id="reviews">
+        <div class="container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
+                <span class="section-label">WHAT USERS ARE SAYING</span>
+                <h2>FlashBurn Customer Reviews</h2>
+                <p style="font-style: italic;">The following reviews are illustrative examples of customer experiences based on common feedback themes, not verified testimonials. Individual results vary. These are not guarantees of specific outcomes.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="review-card">
+                    <div class="review-text">
+                        "I chose FlashBurn because the liquid format sounded easier than another handful of capsules, and I liked that it was marketed as plant-based. I used one dropper in water before my main meal for about five weeks and did notice that my afternoon sugar cravings were somewhat quieter, which helped me stay on track with my meal plan. However, I did not see any meaningful change on the scale, and I experienced some mild jitteriness in the first week that I attributed to the undisclosed caffeine. When I looked into the refund process, the steps seemed complicated enough that I decided not to pursue it. I would describe it as a mildly supportive product, but the lack of transparency about the doses and caffeine content makes it hard to recommend without reservations."
+                    </div>
+                    <div class="review-header" style="margin-bottom: 0; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+                        <div class="reviewer-info" style="margin-left: 0;">
+                            <div class="reviewer-name">Hannah W., 43</div>
+                            <div class="reviewer-meta">Female</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-text">
+                        "I ordered FlashBurn after seeing a video that promised easy fat loss, and I went into it hoping the liquid drops would give me an edge alongside my gym routine. The taste was neutral and the dropper was easy to use, and for the first two weeks I did feel a slight lift in energy before workouts. But by the third and fourth week, the effect seemed to fade, and my appetite was not noticeably different. More concerning was the checkout experience — I was offered extra bottles immediately after payment, and the refund terms were not as simple as the promotional video suggested. I did not lose a significant amount of weight, and I would caution anyone to read the independent reviews before buying."
+                    </div>
+                    <div class="review-header" style="margin-bottom: 0; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+                        <div class="reviewer-info" style="margin-left: 0;">
+                            <div class="reviewer-name">Marcus D., 38</div>
+                            <div class="reviewer-meta">Male</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-text">
+                        "I have tried several liquid drops over the years, and I approached FlashBurn with cautious expectations because the ingredient list was familiar from other products. I took it twice daily before meals for about six weeks and found that my digestion felt somewhat more regular and my mid-morning energy was steadier, but I cannot attribute those changes to the drops with confidence because I also adjusted my sleep schedule during that period. What concerned me most was the inconsistency between the sales page claims and the actual label — the doses are hidden inside a proprietary blend, and the caffeine amount is never stated. I did not experience any severe side effects, but I also did not experience the dramatic results the marketing implied, and I would not purchase it again without clearer transparency."
+                    </div>
+                    <div class="review-header" style="margin-bottom: 0; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+                        <div class="reviewer-info" style="margin-left: 0;">
+                            <div class="reviewer-name">Elena R., 47</div>
+                            <div class="reviewer-meta">Female</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <p style="text-align: center; font-size: 0.8rem; color: var(--text-muted); margin-top: 2rem; font-style: italic;">These reviews reflect illustrative individual experiences and are not verified by independent laboratory testing. FlashBurn does not guarantee specific weight-loss results. Always consult a healthcare professional before starting a new supplement.</p>
+        </div>
+    </section>
+
+    <!-- 11. "FAQ" Section -->
+    <section id="faq">
+        <div class="container" style="max-width: 800px;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <span class="section-label">HELPFUL PRODUCT INFORMATION</span>
+                <h2>FlashBurn Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        What is FlashBurn and what category does it belong to?
+                        <span>+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>FlashBurn — also sold as Flash Burn Drops — is a liquid dietary supplement marketed as a herbal weight loss supplement designed to support metabolism, appetite control, and fat burning. It belongs to the weight-management supplement category and is sold in a dropper bottle.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        What are the main ingredients?
+                        <span>+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>The label discloses a proprietary blend of 22 ingredients totaling 200 mg per 1 mL serving, alongside only 0.7 mcg of chromium picolinate. The blend names maca root, grape seed, guarana seed, African mango, eleutherococcus root, astragalus root, green tea leaf, gymnema leaf, coleus root, capsicum, grapefruit, Panax ginseng, raspberry ketones, L-glutamine, L-tyrosine, L-arginine, beta-alanine, glycyrrhizinate, GABA, L-ornithine, L-tryptophan, and L-carnitine — <strong>but not one individual ingredient dose is disclosed.</strong></p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        How does FlashBurn work?
+                        <span>+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>FlashBurn's marketing describes a multi-pathway mechanism: thermogenesis (driven by green tea extract and capsicum), blood sugar stabilization and craving control (chromium picolinate), and mitochondrial and cellular energy support (adaptogens such as maca root and ginseng). However, the undisclosed blend dose makes it impossible to know whether FlashBurn contains enough of any ingredient to produce a measurable effect.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" style="color: var(--danger-text);">
+                        Does FlashBurn contain caffeine?
+                        <span>+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Yes, it contains natural caffeine sources — guarana seed and green tea leaf — but the exact caffeine amount per serving is not disclosed anywhere on the label. This is a significant practical issue for anyone sensitive to stimulants, managing anxiety, or limiting caffeine for sleep or cardiovascular reasons. The product is not caffeine-free despite some marketing framings that emphasize "no harsh stimulants."</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        How long before I see results?
+                        <span>+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>The seller's materials do not provide a reliable timeline, and independent reviews suggest that meaningful results are slow and inconsistent. One review estimates average weight change at roughly 0.5–1 lb per week with "considerable individual variation," while Trustpilot reviewers report seeing "absolutely NO wt loss" after 30 days of twice-daily use. Given the undisclosed dosing, a reasonable approach is to treat any 30-day period as insufficient for evaluation and to expect, at most, subtle shifts in energy and appetite rather than dramatic fat loss.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        What is the recommended dosage?
+                        <span>+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Dosing instructions vary by seller. One product listing recommends 20 drops (1 mL) daily, split as 10 drops twice daily in water or juice before a meal. Other marketing describes 1–2 full droppers daily, preferably before a meal. Because the bottle volume and serving count are inconsistent across listings — 60 mL with 60 servings versus a "30-day supply" — users should follow the specific instructions printed on the bottle they receive and not assume that taking more drops accelerates results.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Does FlashBurn have a money-back guarantee?
+                        <span>+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>FlashBurn advertises a 60-day money-back guarantee from the date of purchase, with the stated condition that customers must have used the product for at least 30 days before requesting a refund if they are not satisfied. On paper, this provides a two-month window to trial the supplement. In practice, the guarantee has generated significant complaints about execution, including reports of return shipping costs, restocking fees, and offers of only a 50% refund until the product was returned.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" style="color: var(--danger-text);">
+                        Are there any subscription or hidden fees?
+                        <span>+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p><strong>This is the most important question to resolve before ordering, because FlashBurn's checkout has been reported to include upsells and subscription-style offers.</strong> A Trustpilot reviewer describes being offered "6 more bottles at a huge discount" seconds after processing the initial payment, while watching what appeared to be a required video. Other complaints reference restocking fees, return shipping costs, and being told they could only receive a 50% refund until the product was returned. Screenshot the entire checkout flow, decline any post-purchase upsell, and confirm in writing whether the purchase is a one-time payment before entering card details.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        How safe is FlashBurn?
+                        <span>+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>The formula is marketed as plant-based and manufactured in an FDA-registered, GMP-certified facility, and the individual ingredient names are standard for the category. However, safety cannot be fully assessed without disclosed doses — and FlashBurn's blend hides every individual amount. Reported side effects from user reviews include nausea, abdominal pain, jitteriness, and sleep disruption, which are consistent with caffeine-containing botanicals (guarana, green tea) taken in unknown quantities. The product is not recommended for anyone pregnant, nursing, under 18, or managing a medical condition without medical guidance.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Can I use it with other supplements?
+                        <span>+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Stacking FlashBurn with other products is not advisable without professional guidance, primarily because the undisclosed caffeine content makes it impossible to calculate total stimulant intake. If you already take a thermogenic, a pre-workout, a high-dose green tea extract, or a caffeinated fat burner, adding FlashBurn could push total caffeine exposure beyond a comfortable or safe threshold. The shared-ingredient issue also applies: combining FlashBurn with a similar liquid drop product — which independent reviewers note is structurally identical to Gelatine Sculpt and LeanBurn Drops — would duplicate the same botanicals while making the unknown doses even harder to manage.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Is FlashBurn suitable for people with diabetes or on medication?
+                        <span>+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>There is no published safety data on FlashBurn in diabetic or medicated populations, and the chromium dose is too low to be meaningfully therapeutic. More importantly, the undisclosed stimulant content and the possibility of interactions with glucose-lowering, blood-pressure, or thyroid medications make medical consultation essential before use. Dietary supplements are not required to undergo the same safety and efficacy testing as prescription drugs, so users with pre-existing conditions should not rely on marketing claims as evidence of safety.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header" style="color: var(--danger-text);">
+                        Where can I buy FlashBurn, and which website is legitimate?
+                        <span>+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p><strong>There is no single verified official website.</strong> Multiple domains claim to be the official source, and trust scanners have flagged several FlashBurn domains with very low scores — including 1/100 and 32/100 — while describing the sites as exhibiting "scam-like e-commerce" characteristics. The safest approach is to avoid purchasing from any FlashBurn site without first verifying the domain through an independent trust scanner, and to use a payment method with chargeback protection rather than a direct bank transfer.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Who should speak with a healthcare professional before use?
+                        <span>+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>People who take medication, have allergies, are pregnant or breastfeeding, have ongoing health concerns, or are managing a medical condition should consult a qualified healthcare professional before using FlashBurn or any new supplement. This is especially important for those with diabetes, high blood pressure, anxiety, cardiovascular conditions, or those taking blood-thinning medication.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Can FlashBurn replace diet and exercise?
+                        <span>+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>No. FlashBurn is a dietary supplement and is not a replacement for balanced nutrition, regular physical activity, or professional medical guidance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. Final CTA & Education Section -->
+    <section class="section-alt">
+        <div class="container grid-2" style="align-items: center;">
+            <div style="background: var(--bg-alt); padding: 3rem; border-radius: var(--radius-lg); text-align: center;">
+                <div style="height: 150px; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem; overflow: hidden; border-radius: var(--radius-md);">
+                    <img src="https://placehold.co/400x250/E2E8F0/475569?text=3-Bottle+FlashBurn" alt="3-Bottle FlashBurn Package" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h2>Explore a More Informed Approach to Your Weight-Management Goals</h2>
+                <p>Explore the available FlashBurn product information, advertised package sizes and current purchase details. The supplement is marketed toward adults interested in weight-management wellness and healthy lifestyle routines. Review the ingredients, serving directions and seller conditions before deciding whether to order.</p>
+                <a href="#pricing" class="btn btn-primary" style="margin-top: 1rem;">Explore FlashBurn Offers</a>
+            </div>
+            
+            <div style="padding: 2rem;">
+                <span class="section-label">SUPPLEMENT EDUCATION & PRODUCT RESEARCH</span>
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Weight Management, Healthy Habits, Supplement Labels and Responsible Product Use</h3>
+                <p>Researching a weight-management supplement involves more than reading its promotional description. Review the product label, ingredient quantities, serving directions and available seller information. For personal questions about body weight, nutrition or health, speak with an appropriately qualified healthcare professional.</p>
+                
+                <hr style="border: 0; height: 1px; background: var(--border-color); margin: 2rem 0;">
+                
+                <h4 style="font-size: 1rem; color: var(--text-dark);">About This Product Information Page:</h4>
+                <p style="font-size: 0.85rem;">This page provides general information about FlashBurn, a liquid botanical dietary supplement marketed for weight-management wellness and general well-being. Product formula details, availability, prices and seller policies can change and should be confirmed using current product documentation. This content is educational and does not replace professional medical advice.</p>
+                
+                <h4 id="sources" style="font-size: 1rem; color: var(--text-dark); margin-top: 1.5rem;">Sources & References:</h4>
+                <ul style="font-size: 0.85rem; color: var(--text-light);">
+                    <li style="margin-bottom: 0.25rem;">• U.S. Food & Drug Administration — Dietary Supplements Guidance</li>
+                    <li style="margin-bottom: 0.25rem;">• Centers for Disease Control and Prevention — Healthy Weight and Growth</li>
+                    <li style="margin-bottom: 0.25rem;">• National Institutes of Health — Office of Dietary Supplements</li>
+                    <li>• Scamadviser — FlashBurn domain analysis</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- III. Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div>
+                    <div style="font-size: 1.5rem; font-weight: 800; color: #FFFFFF; letter-spacing: -0.02em; margin-bottom: 1rem;">FlashBurn</div>
+                    <p>FlashBurn is a liquid botanical dietary supplement marketed for adults interested in weight management, metabolism support and general wellness. Explore the available product information and review the current label and seller terms before purchasing. Individual experiences vary.</p>
+                    <a href="#pricing" class="btn btn-primary" style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.9rem;">Explore Packages</a>
+                </div>
+                
+                <!-- Product Guide 1 -->
+                <div>
+                    <h4>Product Guide</h4>
+                    <ul style="display: flex; flex-direction: column; gap: 0.75rem;">
+                        <li><a href="#pricing">Available Packages</a></li>
+                        <li><a href="#ingredients">Ingredient Information</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#guarantee">Return Policy Details</a></li>
+                        <li><a href="#pricing">View Checkout</a></li>
+                    </ul>
+                </div>
+
+                <!-- Product Guide 2 -->
+                <div>
+                    <h4>Learn More</h4>
+                    <ul style="display: flex; flex-direction: column; gap: 0.75rem;">
+                        <li><a href="#about">About FlashBurn</a></li>
+                        <li><a href="#about">Weight Management</a></li>
+                        <li><a href="#about">Healthy Lifestyle</a></li>
+                        <li><a href="#faq">Frequently Asked Questions</a></li>
+                        <li><a href="#reviews">Customer Reviews</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Legal -->
+                <div>
+                    <h4>Contact & Legal</h4>
+                    <ul style="display: flex; flex-direction: column; gap: 0.75rem;">
+                        <li><a href="#">See the seller's contact information</a></li>
+                        <li><a href="#sources">Sources & References</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#guarantee">60-Day Money-Back Guarantee (advertised)</a></li>
+                    </ul>
+                    <div class="secure-checkout">
+                        🔒 Secure Checkout
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Disclaimers -->
+            <div class="footer-disclaimer">
+                <p style="margin-bottom: 0.5rem;">FlashBurn is a liquid botanical dietary supplement marketed for adults interested in weight-management wellness and general well-being. Product descriptions do not guarantee individual results.</p>
+                <p>This website does not provide medical advice and does not claim that FlashBurn diagnoses, treats, cures or prevents any disease or medical condition. Consult a qualified healthcare professional about personal health concerns or before starting a new supplement.</p>
+                <p style="margin-top: 1.5rem; font-size: 0.75rem;">&copy; 2026 FlashBurn. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS for Interactivity -->
+    <script>
+        // Mobile Navigation Toggle
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuBtn.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+
+        // FAQ Accordion Logic
+        const accordions = document.querySelectorAll('.accordion-header');
+
+        accordions.forEach(acc => {
+            acc.addEventListener('click', function() {
+                // Toggle active class on header
+                this.classList.toggle('active');
+                
+                // Toggle symbol
+                const symbol = this.querySelector('span');
+                symbol.textContent = this.classList.contains('active') ? '−' : '+';
+
+                // Toggle content visibility
+                const content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
